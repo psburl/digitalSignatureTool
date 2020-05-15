@@ -1,0 +1,1 @@
+docker-compose run digitalSignatureTool go run main.go $@

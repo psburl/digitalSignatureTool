@@ -1,0 +1,7 @@
+version: '3'
+services:
+  digitalSignatureTool:
+    image: golang:alpine
+    volumes:
+      - .:/digitalSignatureTool
+    working_dir: /digitalSignatureTool
