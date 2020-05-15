@@ -14,3 +14,6 @@
 *.key
 *.signed
 *.txt
+
+keys
+signed-messages
