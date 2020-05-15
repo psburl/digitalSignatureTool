@@ -21,11 +21,12 @@ func GenerateKeys() {
 
 	publicKey := key.PublicKey
 
-	saveGobKey("private.key", key)
-	savePEMKey("private.pem", key)
+	os.Mkdir("keys", os.ModePerm)
+	saveGobKey("keys/private.key", key)
+	savePEMKey("keys/private.pem", key)
 
-	saveGobKey("public.key", publicKey)
-	savePublicPEMKey("public.pem", publicKey)
+	saveGobKey("keys/public.key", publicKey)
+	savePublicPEMKey("keys/public.pem", publicKey)
 }
 
 func saveGobKey(fileName string, key interface{}) {

@@ -36,7 +36,8 @@ func main() {
 
 		signMessage := st.SignText(string(text), privateKey)
 		json, _ := json.Marshal(&signMessage)
-		ioutil.WriteFile("signMessage.signed", json, 0644)
+		os.Mkdir("signed-messages", os.ModePerm)
+		ioutil.WriteFile("signed-messages/message.signed", json, 0644)
 
 	} else if *function == "verify" {
 
